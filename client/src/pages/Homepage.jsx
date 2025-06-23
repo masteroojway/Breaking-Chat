@@ -8,19 +8,13 @@ const Homepage = () => {
   return (
     <div className='border w-full h-screen sm:px-[15%] sm:py-[5%]'>
       <div className= {`h-full backdrop-blur-md rounded-2xl border border-gray-600 grid overflow-hidden
-      ${usersel ? 'md:grid-cols-[1fr_2fr_1fr] xl:grid-cols-[1fr_3fr_1fr]':'md:grid-cols-2'}`}>
-
-        {/* Left: Chatlist */}
-        <div className='border-r border-gray-500'>
+      ${usersel ? 'md:grid-cols-[1fr_2fr_1fr] xl:grid-cols-[1fr_1.5fr_1fr]':'md:grid-cols-2'}`}>  
+        <div className='bg-white/20'>
           <Chatlist usersel={usersel} setusersel={setusersel}/>
         </div>
-
-        {/* Center: Chatblock */}
-        <div className='border-r border-gray-500'>
+        <div>
           <Chatblock usersel={usersel} setusersel={setusersel}/>
         </div>
-
-        {/* Right: Profilebar */}
         <div>
           <Profilebar usersel={usersel} setusersel={setusersel}/>
         </div>
