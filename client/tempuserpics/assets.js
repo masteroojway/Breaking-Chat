@@ -55,7 +55,7 @@ export const userDummyData = [
 export const messagesDummyData = [
     {
         "_id": "680f571ff",
-        "senderId": "680f5116f",
+        "senderId": "680f516cf",
         "receiverId": "680f50e4f",
         "text": "Lorem ipsum",
         "seen": true,
@@ -99,6 +99,7 @@ export const messagesDummyData = [
         "senderId": "680f5116f",
         "receiverId": "680f50e4f",
         "image":img1,
+        "text": "Look where i am",
         "seen": true,
         "createdAt": "2025-04-28T10:24:05.164Z",
     },
