@@ -3,7 +3,7 @@ import profile_alison from './profile_alison.png'
 import profile_enrique from './profile_enrique.png'
 import profile_marco from './profile_marco.png'
 import profile_martin from './profile_martin.png'
-
+import img1 from './img1.png'
 export const assets = {
     profile_alison,
     profile_enrique,
@@ -89,6 +89,8 @@ export const messagesDummyData = [
         "_id": "680f573cf",
         "senderId": "680f50e4f",
         "receiverId": "680f5116f",
+        "image":img1,
+        "text": "Look where i am",
         "seen": true,
         "createdAt": "2025-04-28T10:23:56.265Z",
     },
@@ -96,6 +98,7 @@ export const messagesDummyData = [
         "_id": "680f5745f",
         "senderId": "680f5116f",
         "receiverId": "680f50e4f",
+        "image":img1,
         "seen": true,
         "createdAt": "2025-04-28T10:24:05.164Z",
     },

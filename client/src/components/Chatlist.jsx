@@ -14,7 +14,7 @@ const Chatlist = ({ usersel, setusersel }) => {
         <div className="flex justify-between items-center m-3">
         <img
             src="/token.svg"
-            className="max-h-20 bg-black/10 rounded-full p-2 w-24"
+            className="max-h-20 bg-black/30 rounded-full p-2 w-24"
             alt="Token"
         />
         <h1 className="font-bold text-[30px]">Known Aliases</h1>
@@ -26,7 +26,7 @@ const Chatlist = ({ usersel, setusersel }) => {
             alt="Menu"
             />
             {isMenuOpen && (
-            <div className="fixed bg-gray-800/50 p-3 rounded-xl z-50">
+            <div className="fixed bg-gray-800/90 p-3 rounded-xl z-50">
                 <p className="text-red-700 font-bold cursor-pointer">Clocking Out</p>
                 <hr className="border-gray-400 my-2" />
                 <p className="cursor-pointer text-white">DEA surveillance file</p>
@@ -45,10 +45,13 @@ const Chatlist = ({ usersel, setusersel }) => {
         <div className="overflow-y-auto scroll-smooth flex-grow">
         {userDummyData.map((user, index) => {
             const isSelected = usersel?._id === user._id
+            console.log('Selected user:', usersel);
             return (
             <div
                 key={user._id || index}
-                onClick={() => setusersel(user)}
+                onClick={() => {setusersel(user)
+                    console.log('Selected user:', usersel);
+                }}
                 className={`flex items-center hover:bg-white/40 rounded-full ${
                 isSelected ? 'bg-white/60' : ''
                 }`}
