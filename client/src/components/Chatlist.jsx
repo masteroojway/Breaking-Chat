@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { userDummyData } from '../../tempuserpics/assets'
-
+import {useNavigate} from 'react-router-dom'
 const Chatlist = ({ usersel, setusersel }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-
+  const navigate = useNavigate();
   return (
     <div className="pb-5 h-screen">
     <div className="flex flex-col m-3 h-full">
@@ -29,7 +29,8 @@ const Chatlist = ({ usersel, setusersel }) => {
             <div className="fixed bg-gray-800/90 p-3 rounded-xl z-50">
                 <p className="text-red-700 font-bold cursor-pointer">Clocking Out</p>
                 <hr className="border-gray-400 my-2" />
-                <p className="cursor-pointer text-white">DEA surveillance file</p>
+                <p onClick={()=>navigate('/profile')}
+                className="cursor-pointer text-white">DEA surveillance file</p>
             </div>
             )}
         </div>
