@@ -7,6 +7,7 @@ export async function protectroute(req, res, next) {
         const decode = jwt.verify(token, process.env.JWTTOKEN);
         const usertemp = await user.findById(decode.userId).select("-password");
         if(!user) return res.status(404).json({message: "user not found"});
+        req.user = usertemp;
     } catch (error) {
         
     }
